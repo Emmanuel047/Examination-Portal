@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Teacher Dashboard - Examination Portal</title>
+    <link rel="stylesheet" href="css/teacher.css" />
+</head>
+<body>
+    <header>
+        <h1>Teacher Dashboard</h1>
+        <nav>
+            <a href="login.html" id="logoutBtn">Logout</a>
+            <a href="admin.html">Go to Admin Panel</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Add / Edit Student Marks</h2>
+            <p id="welcomeMsg"></p>
+            <form id="studentForm">
+                <label for="studentId">Student ID:</label>
+                <input type="text" id="studentId" required />
+
+                <label for="studentName">Full Name:</label>
+                <input type="text" id="studentName" required />
+
+                <label for="subjectSelect">Subject:</label>
+                <select id="subjectSelect" required>
+                    <option value="" disabled selected>Select Subject</option>
+                    
+                </select>
+                <select>
+                    <option value="">Maths</option>
+                </select>
+                <label for="studentMarks">Marks (0-100):</label>
+                <input type="number" id="studentMarks" min="0" max="100" required />
+
+                <button type="submit">Add / Update Student Marks</button>
+            </form>
+
+            <table id="studentsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th><th>Name</th><th>Subject</th><th>Marks</th><th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="javascript/teacher.js"></script>
+</body>
+</html>

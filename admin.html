@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nyayo School - Examination Portal</title>
+    <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+    <header>
+        <h1>Nyayo School</h1>
+        <nav>
+            <a href="login.html">Logout</a>
+            <a href="teacher.html">Go to Teacher Panel</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Welcome, Admin!</h2>
+            <p>Add new teachers and students below.</p>
+        </section>
+
+        <section>
+            <h3>Add / Edit Teacher</h3>
+            <form id="addTeacherForm">
+                <label for="teacherId">Teacher ID:</label>
+                <input type="text" id="teacherId" required />
+
+                <label for="teacherName">Full Name:</label>
+                <input type="text" id="teacherName" required />
+
+                <label for="teacherEmail">Email:</label>
+                <input type="email" id="teacherEmail" required />
+
+                <label for="teacherPhone">Phone:</label>
+                <input type="tel" id="teacherPhone" />
+
+                <label for="teacherDepartment">Department / Subject:</label>
+                <input type="text" id="teacherDepartment" />
+
+                <button type="submit">Add / Update Teacher</button>
+            </form>
+
+            <table id="teacherTable">
+                <thead>
+                    <tr>
+                        <th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Department</th><th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h3>Add / Edit Student</h3>
+            <form id="addStudentForm">
+                <label for="studentId">Student ID:</label>
+                <input type="text" id="studentId" required />
+
+                <label for="studentName">Full Name:</label>
+                <input type="text" id="studentName" required />
+
+                <label for="studentEmail">Email:</label>
+                <input type="email" id="studentEmail" required />
+
+                <label for="studentPhone">Phone:</label>
+                <input type="tel" id="studentPhone" />
+
+                <label for="studentClass">Class / Grade:</label>
+                <input type="text" id="studentClass" />
+
+                <button type="submit">Add / Update Student</button>
+            </form>
+
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Class</th><th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="javascript/admin.js"></script>
+</body>
+</html>
